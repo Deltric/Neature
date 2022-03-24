@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "neature",
+  "version": "${version}",
+  "name": "Neature",
+  "description": "Extend onto the natural parts of Minecraft",
+  "authors": [
+    "Deltric"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/neature/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      {
+        "adapter": "kotlin",
+        "value": "dev.deltric.neature.client.NeatureClient"
+      }
+    ],
+    "main": [
+      {
+        "adapter": "kotlin",
+        "value": "dev.deltric.neature.Neature"
+      }
+    ]
+  },
+  "mixins": [
+    "neature.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.13.3",
+    "fabric": "*",
+    "minecraft": "1.18.2",
+    "fabric-language-kotlin": "*"
+  }
+}
